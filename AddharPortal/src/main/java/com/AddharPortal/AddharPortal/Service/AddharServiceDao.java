@@ -40,6 +40,7 @@ public class AddharServiceDao implements AddharService {
        AddharDtls addharDtls=addharDtlsRepo.findByuuid(uuid);
        addharRes.setAddharData(addharDtls.getAddharData());
        addharRes.setUuid(uuid);
+        System.out.println("Addhar Number");
 
        String otp=otpService.getOtp(uuid);
        System.out.println(otp+"this is the otp");
