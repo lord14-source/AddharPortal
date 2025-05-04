@@ -1,0 +1,30 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cstmr
+    username: postgres
+    password: Rm@#12345
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+ # Replace with the actual Aadhaar service URL
+
+# Feign client config for Aadhaar Service
+otp-service:
+  url: http://localhost:8087/OTP
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+
+
